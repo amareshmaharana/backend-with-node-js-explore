@@ -1,0 +1,12 @@
+{
+  "name": "fs-module-file-handling-study",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "file.js",
+  "scripts": {
+    "start": "node file.js"
+  }
+}
