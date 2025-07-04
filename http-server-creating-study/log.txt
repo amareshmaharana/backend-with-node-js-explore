@@ -1,6 +1,2 @@
-New req received at : 1751558540291 and url: /about?myname=adrian
-New req received at : 1751558540327 and url: /favicon.ico
-New req received at : 1751558945170 and url: /about?myname=adrian
-New req received at : 1751559251210 and url: /about?myname=adrian&userId=189&role=developer
-New req received at : 1751559436133 and url: /about?myname=amaresh&userId=189&role=developer
-New req received at : 1751560022426 and url: /search?search_query=what+is+networking
+New req received at : 1751589444574 and url: /, with method: GET
+New req received at : 1751589522592 and url: /sign-up, with method: GET

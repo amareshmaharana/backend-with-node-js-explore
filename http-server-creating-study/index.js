@@ -5,10 +5,10 @@ import url from "url"
 const server = http.createServer((req, res) => {
     if(req.url === '/favicon.ico') return res.end()
     
-    const log = `New req received at : ${Date.now()} and url: ${req.url}\n`
+    const log = `New req received at : ${Date.now()} and url: ${req.url}, with method: ${req.method}\n`
 
     const myUrl = url.parse(req.url, true)
-    console.log(myUrl)
+    // console.log(myUrl)
 
     switch (myUrl.pathname) {
         case '/':
@@ -21,6 +21,12 @@ const server = http.createServer((req, res) => {
         case '/search':
             const search = myUrl.query.search_query
             res.end(`You searched for: ${search}`)
+            break;
+        case '/sign-up':
+            if(req.method === 'GET') res.end('This is a sign up page')
+            if(req.method === 'POST'){
+                res.end('You signed up')
+            }
             break;
         default:
             res.end('404 Not Found')
