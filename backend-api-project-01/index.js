@@ -9,6 +9,17 @@ const PORT = 5000;
 // Middleware - Plugin
 app.use(express.urlencoded({ extended: false }));
 
+app.use((req, res, next) => {
+  fs.appendFile('log.txt', `\n${Date.now()}: ${req.method}: ${req.path}`, (err, data) => {
+    next()
+  })
+  // return res.json({message: 'Hey you reached this level!!'})
+})
+
+// +++++++ ABOVE MIDDLEWARE +++++++
+
+
+
 // for only this route - /users - we send a html
 // getting all users
 app.get("/users", (req, res) => {
@@ -34,15 +45,18 @@ app.get("/api/users", (req, res) => {
 // for userid
 app
   .route("/api/users/:id")
+  // GET METHOD
   .get((req, res) => {
     const id = Number(req.params.id);
     const user = mockData.find((user) => user.id === id);
     return res.json(user);
   })
+  // PATCH METHOD
   .patch((req, res) => {
     // Edit user with id
     return res.json({ status: "Pending" });
   })
+  // DELETE METHOD
   .delete((req, res) => {
     // Delete user with id
     return res.json({ status: "Pending" });
@@ -52,7 +66,7 @@ app
 app.post("/api/users", (req, res) => {
   // create new user
   const body = req.body;
-  mockData.push({...body, id: mockData.length + 1});
+  mockData.push({ ...body, id: mockData.length + 1 });
   fs.writeFile("./MOCK_DATA.json", JSON.stringify(mockData), (err, data) => {
     if (err) {
       console.log(err);
