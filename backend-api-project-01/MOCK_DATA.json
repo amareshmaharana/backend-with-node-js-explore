@@ -7998,5 +7998,37 @@
     "email": "cstillertrr@csmonitor.com",
     "gender": "Male",
     "job_title": "Product Engineer"
+  },
+  {
+    "first_name": "Amaresh",
+    "last_name": "Maharana",
+    "email": "amareshcoder@gmail.com",
+    "gender": "male",
+    "job_title": "Full Stack Dev",
+    "id": 1001
+  },
+  {
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "example@gmail.com",
+    "gender": "male",
+    "job_title": "Software Dev",
+    "id": 1002
+  },
+  {
+    "first_name": "Stan",
+    "last_name": "Lee",
+    "email": "stanexample@gmail.com",
+    "gender": "male",
+    "job_title": "Software Dev",
+    "id": 1003
+  },
+  {
+    "first_name": "Stan",
+    "last_name": "Lord",
+    "email": "stanlord1234@gmail.com",
+    "gender": "male",
+    "job_title": "Cloud Dev",
+    "id": 1004
   }
 ]
